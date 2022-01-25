@@ -27,6 +27,9 @@ int main() {
     alertInCelcius(400.5);
     alertInCelcius(303.6);
     std::cout << alertFailureCount << " alerts failed.\n";
+    // Note: As I can understand, the above inputs should have increemented the failure count by 2.
+    // Since it is never checked, there is no assertion leading to successful passing of testcase.
+    assert(alertFailureCount == 2);
     std::cout << "All is well (maybe!)\n";
     return 0;
 }
