@@ -20,7 +20,7 @@ int main() {
     
     // expecting for the size equaling 38 and 42 as M. 
     assert(size(42) == 'M');
-    assert(size(38) == 'M')
+    assert(size(38) == 'M');
     
         std::cout << "All is well (maybe!)\n";
     return 0;
