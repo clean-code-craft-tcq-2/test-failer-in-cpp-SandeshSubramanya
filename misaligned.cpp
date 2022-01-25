@@ -16,16 +16,16 @@ int printColorMap() {
     {
         for(j = 0; j < 5; j++) 
         {
+            std::cout << i * 5 + j << " | " << majorColor[i] << " | " << minorColor[i] << "\n";
+            // create a pair of colors with the below logic.
+            
             pair<string, string> Individualpair;
             Individualpair.first = majorColor[i];
             Individualpair.second = minorColor[i];
-            oColorMaps.push_back(Individualpair);
             
-            std::cout << i * 5 + j << " | " << majorColor[i] << " | " << minorColor[i] << "\n";
+            oColorMaps.push_back(Individualpair);
         }
     }
-    
-    print();
     return i * j;
 }
 
