@@ -8,7 +8,15 @@ int networkAlertStub(float celcius) {
     // Return 200 for ok
     // Return 500 for not-ok
     // stub always succeeds and returns 200
-    return 200;
+    if(celcius > 200)
+    {
+        // celcius higher than 200 is okay
+        return 500;     // Not OK
+    }
+    else
+    {   // celcius less or equaling 200 is okay
+        return 200;
+    }
 }
 
 void alertInCelcius(float farenheit) {
@@ -24,11 +32,9 @@ void alertInCelcius(float farenheit) {
 }
 
 int main() {
-    alertInCelcius(400.5);
-    alertInCelcius(303.6);
+    alertInCelcius(400.5);  // 400F corresponds to 204 degree C
+    alertInCelcius(303.6);  // 303.6F corresponds to 150 degree C
     std::cout << alertFailureCount << " alerts failed.\n";
-    // Note: As I can understand, the above inputs should have increemented the failure count by 2.
-    // Since it is never checked, there is no assertion leading to successful passing of testcase.
     assert(alertFailureCount == 2);
     std::cout << "All is well (maybe!)\n";
     return 0;
