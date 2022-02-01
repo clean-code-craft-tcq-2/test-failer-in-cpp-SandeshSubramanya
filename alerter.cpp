@@ -35,7 +35,7 @@ int main() {
     alertInCelcius(400.5);  // 400F corresponds to 204 degree C
     alertInCelcius(303.6);  // 303.6F corresponds to 150 degree C
     std::cout << alertFailureCount << " alerts failed.\n";
-    assert(alertFailureCount == 2);
+    assert(alertFailureCount == 1);
     std::cout << "All is well (maybe!)\n";
     return 0;
 }
